@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Elephant class, hero of the game
  * 
  * @author (Adrian) 
- * @version (April 27 2026: 11:27am)
+ * @version (April 27 2026)
  */
 public class Elephant extends Actor
 {
