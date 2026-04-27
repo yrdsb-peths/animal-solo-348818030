@@ -23,5 +23,8 @@ public class Elephant extends Actor
             move(1);
         }
         
+        // removes apple if elephant is touching it
+        removeTouching(Apple.class);
+        
     }
 }
