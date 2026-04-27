@@ -11,6 +11,9 @@ public class MyWorld extends World {
         Elephant hero = new Elephant();
         addObject(hero,300,200);
         
+        Apple apple = new Apple();
+        addObject(apple,300,0);
+        
         
     }
 }
