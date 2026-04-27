@@ -11,7 +11,7 @@ public class MyWorld extends World {
     
     // Constructor for objects of class MyWorld
     public MyWorld() {
-        super(600, 400, 1);
+        super(600, 400, 1, false);
         
         // Create elephant
         Elephant hero = new Elephant();
@@ -24,6 +24,13 @@ public class MyWorld extends World {
         // Spawn apple
         createApple();
         
+    }
+    
+    // End the game and draw 'GameOver'
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel, 300, 200);
     }
     
     // Increase score
