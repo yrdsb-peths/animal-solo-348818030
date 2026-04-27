@@ -24,7 +24,18 @@ public class Elephant extends Actor
         }
         
         // removes apple if elephant is touching it
-        removeTouching(Apple.class);
+        eat();
         
+    }
+    
+    // Eat the apple and spawn a new apple
+    public void eat()
+    {
+        if(isTouching(Apple.class))
+        {
+            removeTouching(Apple.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createApple();
+        }
     }
 }
