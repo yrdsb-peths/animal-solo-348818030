@@ -8,9 +8,15 @@ public class MyWorld extends World {
     public MyWorld() {
         super(600, 400, 1);
         
+        // Create elephant
         Elephant hero = new Elephant();
         addObject(hero,300,200);
         
+        // Creates a label
+        Label scoreLabel = new Label(0, 80);
+        addObject(scoreLabel, 50, 50);
+        
+        // Spawn apple
         createApple();
         
     }
