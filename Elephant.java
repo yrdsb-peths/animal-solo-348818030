@@ -21,6 +21,14 @@ public class Elephant extends Actor
         setImage(idle[0]);
     }    
     
+    // Animate the elephant
+    int imageIndex = 0;
+    public void animateElephant()
+    {
+        setImage(idle[imageIndex]);
+        imageIndex = (imageIndex + 1) % idle.length;
+    }
+    
     public void act()
     {
         if(Greenfoot.isKeyDown("a"))
@@ -32,8 +40,11 @@ public class Elephant extends Actor
             move(1);
         }
         
-        // removes apple if elephant is touching it
+        // Removes apple if elephant is touching it
         eat();
+        
+        // Animate the elephant
+        animateElephant();
         
     }
     
