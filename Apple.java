@@ -14,6 +14,14 @@ public class Apple extends Actor
      */
     int speed = 1;
     
+    public Apple()
+    {
+        GreenfootImage apple = new GreenfootImage("apple1.png");
+        apple.scale(60,60);
+        setImage(apple);
+        
+    }
+    
     public void act()
     {
         // Apple falls downwards.
