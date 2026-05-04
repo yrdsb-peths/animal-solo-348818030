@@ -8,7 +8,7 @@ public class MyWorld extends World {
     
     public int score = 0;
     Label scoreLabel;
-    
+    int level = 1;    
     // Constructor for objects of class MyWorld
     public MyWorld() {
         super(600, 400, 1, false);
@@ -38,12 +38,18 @@ public class MyWorld extends World {
     {
         score++;
         scoreLabel.setValue(score);
+        
+        if(score % 5 == 0)
+        {
+            level += 1;
+        }
     }
     
     // Creates a new apple at a random location at the top
     public void createApple()
     {
         Apple apple = new Apple();
+        apple.setSpeed(level);
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(apple,x,y);
