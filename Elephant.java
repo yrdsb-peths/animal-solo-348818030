@@ -19,6 +19,9 @@ public class Elephant extends Actor
     // Constructor - The code that gets run one time when the object is created
     public Elephant()
     {
+        // Set elephant noise volume
+        elephantSound.setVolume(15);
+        
         for(int i = 0; i < idleRight.length; i++)
         {
             idleRight[i] = new GreenfootImage("images/tile00" + i + ".png");
