@@ -13,6 +13,11 @@ public class MyWorld extends World {
     public MyWorld() {
         super(600, 400, 1, false);
         
+        // Resize background to fit world
+        GreenfootImage plainsBg = new GreenfootImage("Images/prideLands.jpg");
+        plainsBg.scale(getWidth(), getHeight());
+        setBackground(plainsBg);
+        
         // Create elephant
         Elephant hero = new Elephant();
         addObject(hero,300,200);
